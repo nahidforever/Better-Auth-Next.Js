@@ -15,7 +15,7 @@ import { Check, Eye, EyeSlash } from "@gravity-ui/icons";
 import { authClient } from "@/lib/auth-client";
 import { useState } from "react";
 
-const SignIPage = () => {
+const SignInPage = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   const onSubmit = async (e) => {
@@ -30,7 +30,7 @@ const SignIPage = () => {
       email: userData.email,
       password: userData.password,
       rememberMe: true,
-      callbackURL: "/",
+      callbackURL: "/dashboard",
     });
 
     console.log("Sign In response:", { data, error });
@@ -97,4 +97,4 @@ const SignIPage = () => {
   );
 };
 
-export default SignIPage;
+export default SignInPage;
